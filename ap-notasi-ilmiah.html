@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pico/pico.min.css">
+    <title>Angka Penting dan Notasi Ilmiah</title>
+  </head>
+  <body>
+    <main class="container">
+	  <h1>Angka Penting</h1>
+	  <article>
+		<p>
+		Angka penting adalah digit angka yang memiliki makna dalam membentuk resolusi (akurasi dan presisi) pengukuran. Dengan kata lain, ide di balik angka penting ini adalah ketika kita mempunyai angka-angka hasil pengukuran, kita tepat dalam menampilkan resolusi alat ukurnya. Sehingga, hasilnya tidak lebih (atau kurang) teliti daripada objek yang benar-benar kita ukur.
+		</p>
+		<h2>Aturan angka penting</h2>
+		<p>
+		Sebelum melihat beberapa contoh, mari kita meringkas aturan untuk angka penting:
+			<ol>
+				<li>Semua angka yang bukan nol (1,2,3,4,5,6,7,8,9) merupakan <b>angka penting</b>.</li>
+				<li>Angka nol diantara angka yang bukan nol adalah <b>angka penting</b>.</li>
+				<li>Angka-angka nol awalan <b>bukan angka penting</b>.</li>
+				<li>Pada angka yang memiliki nilai (pecahan) desimal, angka nol akhiran adalah <b>angka penting</b>.</li>
+				<li>Pada angka yang tidak memiliki nilai (pecahan) desimal, angka nol akhiran <b>bisa merupakan angka penting atau tidak</b>, tergantung informasi tambahan. Bisa berupa garis bawah.</li>
+			</ol>
+		</p>
+		<figure>
+			<table>
+				<thead><tr><th>ANGKA</th><th>ANGKA PENTING</th><th>ATURAN</th></tr></thead>
+				<tbody><tr><td>48.923</td><td>5</td><td>1</td></tr><tr><td>3,967</td><td>4</td><td>1</td></tr><tr><td>900,06</td><td>5</td><td>2</td></tr><tr><td>0,0004</td><td>1	</td><td>3</td></tr><tr><td>8,1000</td><td>5</td><td>4</td></tr><tr><td>501,040</td><td>6</td><td>2 &amp; 4</td></tr><tr><td>3.000.00<u>0</u></td><td>7</td><td>5</td></tr>
+			</table>
+		</figure>
+		<h1>Aturan pembulatan angka penting</h1>
+		<ol>
+			<li>Angka yang lebih besar dari 5 dibulatkan ke atas atau ditambahkan 1 kebilangan berikutnya. Contoh: 8,59 menjadi 8,6</li>
+			<li>Angka yang kurang dari 5 dibulatkan ke bawah atau ditambahkan 0 kebilangan berikutnya. Contoh: 9,43 menjadi 9,4</li>
+			<li>Angka yang tepat 5, Jika diikuti bilangan genap maka dibulatkan ke bawah, contoh 6,45 dibulatkan 6,4 dan Jika diikuti bilangan ganjil maka dibulatkan ke atas, contoh 6,35 dibulatkan 6,4</li>
+		</ol>
+		<h1>Operasi hitung angka penting</h1>
+		<p><mark>AP = <b>A</b>ngka <b>P</b>enting</mark></p>
+		<h2>Penjumlahan dan Pengurangan</h2>
+		<p>
+		Ketika kita menambah atau mengurangi angka, angka penting tidak digunakan, aturannya adalah <b>gunakan desimal yang paling besar ketidakpastiannya</b>, atau angka yang paling tidak teliti. Misalnya 1,26 (3 AP) + 2,3 (2 AP)</b> = 3,56 &asymp; 3,6 (2AP). Perhatikan bahwa kebetulan saja hasilnya menggunakan angka penting yang paling kecil, karena yang menjadi patokan adalah angka yang paling tidak teliti, yaitu satu angka di belakang koma (2,3), sehingga hasil penjumlahan juga satu angka di belakang koma.
+		Misalnya kita beri contoh lain 1,26 (3 AP) + 102,3 (4 AP) = 103,56 &asymp; 103,6 (4 AP), kali ini hasilnya mengikuti angka penting paling besar, oleh karena itu angka penting tidak digunakan untuk operasi tambah dan kurang. Perhatikan bahwa hasilnya mengikuti angka yang paling tidak teliti, yaitu <b>satu angka di belakang koma</b> (102,3).
+		</p>
+		<h2>Perkalian dan Pembagian</h2>
+		<p>
+		Ketika kita mengalikan atau membagi angka, maka hasil dari perhitungan tersebut harus memiliki jumlah angka penting sebanyak <b>angka penting yang paling sedikit</b> dari komponen perhitungan. Misalnya 1,69 (3 AP) &times; 2,09 (3 AP) = 3,5321 &asymp; 3,53 (3 AP). Pada perhitungan ini semua komponen memiliki 3 angka penting sehingga hasil perkalian juga memiliki 3 angka penting.
+		Misalnya kita beri contoh lain 10,1 <b>(3 AP)</b> &times; 12,07 (4 AP) = 121,907 &asymp; 122 <b>(3 AP)</b> kali ini hasilnya mengikuti angka penting paling kecil, yaitu 3 angka penting.
+		</p>
+		<h2>Akar dan Pangkat</h2>
+		<p>
+		Pada bilangan yang dipangkatkan atau yang ditarik akarnya, maka jumlah angka penting hasil perhitungannya akan mengikuti jumlah angka penting bilangan komponennya (yang dipangkatkan atau ditarik akarnya).
+		</p>
+		<p>
+		Contoh:
+			<ul>
+				<li>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mn>1</mn>
+					<mo>,</mo>
+					<msup>
+						<mn>5</mn>
+						<mn>3</mn>
+					</msup>
+					<mo>=</mo>
+					<mn>3</mn>
+					<mo>,</mo>
+					<mn>375</mn>
+					<mo>&#x2248;</mo>
+					<mn>3</mn>
+					<mo>,</mo>
+					<mn>4</mn>
+						<mstyle scriptlevel="0">
+						<mspace width="1em"></mspace>
+						</mstyle>
+					<mo stretchy="false">&#x21D2;</mo>
+					<mn>2</mn>
+					<mi>a</mi>
+					<mo>.</mo>
+					<mi>p</mi>
+					<mo>.</mo>
+				</math>
+				</li>
+				<li>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msqrt>
+    <mn>625</mn>
+  </msqrt>
+  <mo>=</mo>
+  <mn>25</mn>
+  <mo>,</mo>
+  <mn>0</mn>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">&#x21D2;</mo>
+  <mn>3</mn>
+  <mi>a</mi>
+  <mo>.</mo>
+  <mi>p</mi>
+  <mo>.</mo>
+</math>
+				</li>
+			</ul>
+		</p>
+		</article>
+		<h1>Notasi Ilmiah</h1>
+		
+		<article>
+		<img src="images/notasi-ilmiah.png" alt="Notasi Ilmiah" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+		<p>
+		Notasi ilmiah dapat membantu kita untuk merepresentasikan bilangan-bilangan yang sangat besar atau sangat kecil dalam bentuk perkalian bilangan satu digit dan 10 dipangkatkan dengan eksponennya masing-masing. Pangkatnya positif jika bilangannya sangat besar dan negatif jika bilangannya sangat kecil.
+		</p>
+		<p>penulisan notasi ilmiah: a × 10<sup>b</sup> ; 1 ≤ a &lt; 10</p>
+		<h1>Aturan Notasi Ilmiah</h1>
+		<p>
+		Untuk menentukan pangkat atau eksponen dari 10,  kita harus mengikuti aturan di bawah ini:
+		<ul>
+			<li>Basisnya harus selalu 10</li>
+			<li>Eksponennya harus berupa bilangan bulat bukan nol, artinya bisa positif atau negatif</li>
+			<li>Nilai absolut koefisien lebih besar atau sama dengan 1 tetapi harus kurang dari 10</li>
+			<li>Koefisien dapat berupa bilangan positif atau negatif termasuk bilangan bulat dan desimal</li>
+		</ul>
+		Contoh:
+		<ul>
+			<li>Jika bilangan yang diberikan adalah kelipatan 10 maka koma desimal harus digeser ke kiri, dan pangkat 10 akan menjadi positif. Contoh: 6000 = 6×10<sup>3</sup> dalam notasi ilmiah.</li>
+			<li>Jika bilangan yang diberikan lebih kecil dari 1, maka koma desimal harus digeser ke kanan, sehingga pangkat 10 menjadi negatif. Contoh: 0,006 = 6×0,001 = 6×10<sup>-3</sup>  dalam notasi ilmiah.</li>
+		</ul>
+		</p>
+		</article>
+    </main>
+  </body>
+</html>
